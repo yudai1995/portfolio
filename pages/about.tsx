@@ -1,4 +1,5 @@
 import Head from "next/dist/shared/lib/head";
+//import styles from "../styles/about.module.scss";
 import styles from "../styles/about.module.scss";
 import Layout from "../components/Layout/Layout";
 import LogoNameLayout from "../components/Layout/LogoNameLayout";

@@ -1,61 +1,53 @@
-@import "./Base/variable";
+// @import "./Base/variable";
 
-.aboutSection {
-  .aboutName {
-    font-size: 6rem;
-    margin-top: 20px;
-    // @include mq(sm) {
-    //   font-size: 5.2rem;
-    //   text-align: center;
-    // }
-  }
-  .contentList {
-    margin: 20px 0 60px;
-    .contentWrapper {
-      .title {
-        display: inline-block;
-        width: 200px;
-      }
-      .description {
-        display: inline-block;
-        width: calc(100% - 220px);
-        margin-left: 20px;
-      }
+// .aboutSection {
+//   .aboutName {
+//     font-size: 6rem;
+//     margin-top: 20px;
+//   }
+//   .contentList {
+//     margin: 20px 0 60px;
+//     .contentWrapper {
+//       .title {
+//         display: inline-block;
+//         width: 200px;
+//       }
+//       .description {
+//         display: inline-block;
+//         width: calc(100% - 220px);
+//         margin-left: 20px;
+//       }
 
-      & + .contentWrapper {
-        margin-top: 16px;
-      }
-      @include mq(md) {
-        .title {
-          width: 100px;
-        }
-        .description {
-          width: calc(100% - 140px);
-        }
-      }
+//       & + .contentWrapper {
+//         margin-top: 16px;
+//       }
+//       @include mq(md) {
+//         .title {
+//           width: 100px;
+//         }
+//         .description {
+//           width: calc(100% - 140px);
+//         }
+//       }
 
-      @include mq(sm) {
-        .title {
-          //font-size: 1.4rem;
-          color: #9b9b9b;
-          display: block;
-          width: 100%;
-        }
-        .description {
-          display: block;
-          width: 100%;
-          margin-top: 0px;
-          margin-left: 0;
-        }
-      }
-    }
-  }
-  .profile {
-    p + p {
-      margin-top: 18px;
-      // @include mq(sm) {
-      //     margin-top: 6px;
-      // }
-    }
-  }
-}
+//       @include mq(sm) {
+//         .title {
+//           color: #9b9b9b;
+//           display: block;
+//           width: 100%;
+//         }
+//         .description {
+//           display: block;
+//           width: 100%;
+//           margin-top: 0px;
+//           margin-left: 0;
+//         }
+//       }
+//     }
+//   }
+//   .profile {
+//     p + p {
+//       margin-top: 18px;
+//     }
+//   }
+// }
