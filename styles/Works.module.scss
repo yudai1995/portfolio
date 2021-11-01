@@ -1,0 +1,192 @@
+@import "variable";
+.worksWrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  section.workSection {
+    width: calc(33% - 20px);
+    margin-left: 32px;
+
+    &:nth-of-type(3n + 1) {
+      margin-left: 0;
+    }
+
+    &:nth-of-type(n + 4) {
+      margin-top: 32px;
+    }
+
+    @include mq(xxl) {
+      width: calc(50% - 10px);
+      margin: 0;
+
+      &:nth-of-type(2n) {
+        margin-left: 20px;
+      }
+
+      &:nth-of-type(n + 3) {
+        margin-top: 32px;
+        @include mq(md) {
+          margin-top: 40px;
+        }
+      }
+    }
+
+    .title {
+      font-size: 1.8rem;
+      font-weight: normal;
+      width: 100%;
+      padding: 10px;
+    }
+
+    .content {
+      position: relative;
+      width: 100%;
+      height: 148px;
+      background-color: #ffffff;
+      box-shadow: 0 0 2px 2px #5f5f5f33;
+      overflow: scroll;
+      overflow: hidden;
+      cursor: pointer;
+
+      .img {
+        margin: 0;
+        transition: transform $transitionSpeed;
+      }
+
+      &:hover {
+        .img {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    @include mq(xxl) {
+      .content,
+      .othersContent {
+        height: 264px;
+      }
+    }
+
+    @include mq(lg) {
+      .content,
+      .othersContent {
+        height: 240px;
+      }
+    }
+
+    @include mq(md) {
+      .content,
+      .othersContent {
+        height: 160px;
+      }
+    }
+
+    @include mq(sm) {
+      .content,
+      .othersContent {
+        height: 80px;
+      }
+    }
+
+    .detail {
+      word-break: break-all;
+
+      .title {
+        font-size: 2rem;
+        font-weight: normal;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .subTitle {
+        color: #636363;
+        font-size: 1.5rem;
+        margin: 36px 0 0;
+      }
+
+      .linkList {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 40px auto 0;
+        max-width: 600px;
+
+        .list {
+          width: calc(50% - 15px);
+          &:nth-of-type(2n) {
+            margin-left: 30px;
+          }
+          &:nth-of-type(n + 3) {
+            margin-top: 20px;
+          }
+        }
+      }
+
+      .comment {
+        margin-top: 20px;
+      }
+
+      :global {
+        .col1 {
+          justify-content: center;
+        }
+      }
+    }
+
+    @include mq(md) {
+      .detail {
+        .title {
+          font-size: 1.6rem;
+        }
+
+        .subTitle {
+          font-size: 1.4rem;
+          margin: 20px 0 0;
+        }
+
+        .linkList {
+          display: block;
+          margin: 32px auto 0;
+          max-width: 100%;
+
+          .list {
+            width: 100%;
+            &:nth-of-type(2n) {
+              margin-left: 0;
+            }
+            &:nth-of-type(n + 3) {
+              margin-top: 10px;
+            }
+            &:nth-of-type(n + 2) {
+              margin-top: 10px;
+            }
+          }
+        }
+
+        .comment {
+          margin-top: 10px;
+        }
+      }
+    }
+
+    .othersContent {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 6px 0;
+
+      .text {
+        text-align: center;
+      }
+      .link {
+        text-align: center;
+        width: 320px;
+        margin: 20px auto 0;
+
+        @include mq(md) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

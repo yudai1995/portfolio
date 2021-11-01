@@ -1,0 +1,31 @@
+.contents {
+  min-height: calc(100vh - 200px);
+
+  .grobalmenu {
+    width: 200px;
+    li {
+      & + li {
+        margin-top: 10px;
+      }
+    }
+    a {
+      color: #3b3b3b;
+      font-size: 1.4rem;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+  }
+}
+
+.homeHeader {
+  background-color: #ffffff;
+  margin-bottom: 40px;
+  padding-top: 4px;
+  height: 60px;
+
+  .headerWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

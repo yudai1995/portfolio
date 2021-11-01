@@ -1,0 +1,24 @@
+@import "variable";
+
+.header {
+  background-color: #ffffff;
+  margin-bottom: 40px;
+  padding-top: 4px;
+  height: 60px;
+
+  .headerWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h1.headerTitle {
+      margin: 0;
+    }
+    
+  }
+  @include mq(md) {
+    .headerWrapper {
+      display: block;
+    }
+  }
+}
