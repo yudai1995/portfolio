@@ -234,22 +234,18 @@ const Works = () => {
                 </section>
               </Modal>
             </section>
-            <section className={`${styles.workSection} others`}>
-              <div className={styles.othersContent}>
-                <p className={styles.text}>
-                  よろしければGitHubもご覧ください。
-                </p>
-                <p className={`${styles.link} arrowIcon`}>
-                  <LinkLayout
-                    url="https://github.com/YUDAI1995"
-                    name="GitHub"
-                    imgSrc="/images/github-icon01.png"
-                    imgWidth={64}
-                    imgHeight={64}
-                  />
-                </p>
-              </div>
-            </section>
+          </div>
+          <div className={styles.others}>
+            <p className={styles.text}>よろしければGitHubもご覧ください。</p>
+            <p className={`${styles.link} arrowIcon`}>
+              <LinkLayout
+                url="https://github.com/YUDAI1995"
+                name="GitHub"
+                imgSrc="/images/github-icon01.png"
+                imgWidth={64}
+                imgHeight={64}
+              />
+            </p>
           </div>
         </>
       </ContentLayout>
