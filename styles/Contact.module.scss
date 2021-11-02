@@ -13,6 +13,14 @@ $iconSize: 48px;
 
   .text {
     text-align: center;
+    .sm {
+      display: none;
+    }
+    @include mq(sm) {
+      .sm {
+        display: block;
+      }
+    }
   }
 
   .emailWrapper {
@@ -50,6 +58,8 @@ $iconSize: 48px;
   }
 
   @include mq(sm) {
+    min-height: 400px;
+
     .emailWrapper {
       max-width: 100%;
       width: 100%;
@@ -81,11 +91,11 @@ $iconSize: 48px;
   }
 
   .linkSection {
+    margin-top: 100px;
     .subTitle {
       font-size: 3.2rem;
       text-align: center;
     }
-    margin-top: 100px;
 
     .linkList {
       display: flex;
@@ -118,6 +128,8 @@ $iconSize: 48px;
     }
 
     @include mq(sm) {
+      margin-top: 60px;
+
       .linkList {
         display: block;
         max-width: 100%;

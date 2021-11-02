@@ -26,7 +26,7 @@ const Contact = () => {
       </Head>
       <ContentLayout title="Contact">
         <div className={styles.contentWrapper}>
-          <p className={styles.text}>ご連絡の際は、Emailにてお願いいたします。</p>
+          <p className={styles.text}>ご連絡はEmailよりお願いいたします。</p>
 
           <div className={styles.emailWrapper}>
             <span className={styles.emailIcon}>

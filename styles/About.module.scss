@@ -4,9 +4,16 @@
   .aboutName {
     font-size: 6rem;
     margin-top: 20px;
+    @include mq(md) {
+      margin-top: 0;
+      font-size: 4.8rem;
+    }
   }
   .contentList {
     margin: 20px 0 60px;
+    @include mq(md) {
+      margin: 10px 0 40px;
+    }
     .contentWrapper {
       .title {
         display: inline-block;
@@ -22,6 +29,23 @@
         margin-top: 16px;
       }
 
+      @include mq(sm) {
+        .title {
+          display: block;
+          width: 100%;
+          font-size: 1.2rem;
+          color: #7c7c7c;
+        }
+        .description {
+          display: block;
+          width: 100%;
+          margin-left: 0;
+        }
+
+        & + .contentWrapper {
+          margin-top: 16px;
+        }
+      }
     }
   }
   .profile {

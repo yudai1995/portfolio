@@ -62,7 +62,7 @@ const works: {
     imgWidth: 1284,
     imgHeight: 963,
     imgLayout: "responsive",
-    tecNum: [0, 1, 6, 8, 4, 9, 10, 11],
+    tecNum: [0, 2, 6, 8, 4, 9, 10, 11],
     link: [
       {
         pagename: "GitHub",
@@ -93,7 +93,7 @@ const works: {
     imgWidth: 1920,
     imgHeight: 967,
     imgLayout: "responsive",
-    tecNum: [0, 2, 3, 5, 9, 10],
+    tecNum: [0, 1, 3, 5, 9, 10],
     comment: [
       "舞台機構設営前の照明シミュレーションを目的に、学生時に作成したものです。",
       "Three.jsを用いて3Dモデリングを行いました。",
@@ -216,7 +216,7 @@ const Works = () => {
                     ポートフォリオ
                   </h2>
                   <h3 className={styles.subTitle}>{subTitle}</h3>
-                  <p className={styles.text}>HTML, Sass, Next.js, TypeScript</p>
+                  <p className={styles.text}>{getTectText([0, 2, 7, 4])}</p>
                   <div className={styles.comment}>
                     <p>本サイトです。Next.jsを用いております。</p>
                   </div>

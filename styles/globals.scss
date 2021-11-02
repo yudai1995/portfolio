@@ -25,6 +25,12 @@ body {
   color: $defaultTextColor;
 }
 
+@supports (-webkit-touch-callout: none) {
+  body {
+    height: -webkit-fill-available;
+  }
+}
+
 a {
   color: $defaultTextColor;
   text-decoration: none;
