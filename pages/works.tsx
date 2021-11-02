@@ -5,7 +5,7 @@ import Layout from "../components/Layout/Layout";
 import ContentLayout from "../components/Layout/ContentLayout";
 import LinkLayout from "../components/Layout/LinkLayout";
 import Modal from "../components/Modal";
-import styles from "../styles/Home.module.scss";
+import styles from "../styles/Works.module.scss";
 
 // 仕様種類
 class Tec {
