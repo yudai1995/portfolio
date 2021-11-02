@@ -13,6 +13,10 @@
     margin-bottom: 20px;
 
     @include mq(lg) {
+      font-size: 7.2rem;
+    }
+
+    @include mq(sm) {
       font-size: 6.4rem;
     }
   }
@@ -23,7 +27,7 @@
 
   @include mq(sm) {
     .homeName {
-      font-size: 4.2rem;
+      font-size: 5.0rem;
     }
     .text {
       font-size: 2.8rem;
