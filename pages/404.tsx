@@ -15,7 +15,7 @@ const Custom404: React.ReactNode = () => {
             <h1>
               <span>404</span>Sorry, This page is Not Found
             </h1>
-            <Link href="/">
+            <Link href="/" passHref>
               <span className={styles.returnBtn}>ホームに戻ります</span>
             </Link>
           </section>

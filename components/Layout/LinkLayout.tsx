@@ -18,7 +18,7 @@ const LinkLayout: React.FC<LinkLayout> = ({
   imgHeight,
 }) => {
   return (
-    <a href={url} target="_blank" className="pageLink">
+    <a href={url} target="_blank" className="pageLink" rel="noreferrer">
       <span className="linkIcon">
         <Image
           src={imgSrc}
