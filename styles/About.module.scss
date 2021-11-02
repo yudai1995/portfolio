@@ -21,28 +21,7 @@
       & + .contentWrapper {
         margin-top: 16px;
       }
-      @include mq(md) {
-        .title {
-          width: 100px;
-        }
-        .description {
-          width: calc(100% - 140px);
-        }
-      }
 
-      @include mq(sm) {
-        .title {
-          color: #9b9b9b;
-          display: block;
-          width: 100%;
-        }
-        .description {
-          display: block;
-          width: 100%;
-          margin-top: 0px;
-          margin-left: 0;
-        }
-      }
     }
   }
   .profile {
