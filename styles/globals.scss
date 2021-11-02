@@ -3,10 +3,7 @@
 
 $iconImgSize: 32px;
 $iconSize: 48px;
-$linkBtnColor: #21a98f;
-$linkBtnBorderColor: #096655;
-$linkBtnHoverColor: #5abdad;
-$linkBtnHoverBorderColor: #1e917d;
+
 
 html {
   -webkit-text-size-adjust: 100%;
@@ -107,8 +104,8 @@ main {
   color: #ffffff;
   width: 100%;
   min-height: 72px;
-  border-bottom: 6px solid $linkBtnBorderColor;
-  border-radius: 10px;
+  border-bottom: 4px solid $linkBtnBorderColor;
+  border-radius: 6px;
   padding: 6px 48px 6px 80px;
   background-color: $linkBtnColor;
   transition: $transitionSpeed;
