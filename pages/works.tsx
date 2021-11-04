@@ -24,6 +24,7 @@ const tecs = [
   "Node.js",
   "Express",
   "MySQL",
+  "Socket.IO"
 ];
 const tecList = tecs.map((tec, index) => new Tec(index, tec));
 
@@ -88,6 +89,36 @@ const works: {
   },
   {
     id: 1,
+    name: "チャットツール",
+    imgSrc: "/images/works/chatapp-img01.png",
+    imgWidth: 1690,
+    imgHeight: 1404,
+    imgLayout: "responsive",
+    tecNum: [0, 2, 6, 8, 4, 9, 10, 12],
+    link: [
+      {
+        pagename: "GitHub",
+        url: "https://github.com/YUDAI1995/react-chatapp",
+        imgSrc: "/images/github-icon01.png",
+        linkIcon: "",
+        linkWidth: 64,
+        linkHeight: 64,
+      },
+      {
+        pagename: "サイト",
+        url: "https://y1995-chatapp.herokuapp.com",
+        imgSrc: "/images/webpage-icon01.png",
+        linkIcon: "",
+        linkWidth: 64,
+        linkHeight: 64,
+      },
+    ],
+    comment: [
+      "ReactとSocket.IOを用いてリアルタイムでチャットできるツールを作成しました。",
+    ],
+  },
+  {
+    id: 2,
     name: "舞台照明シミュレーションツール",
     imgSrc: "/images/works/stage-lighting-simulation-img01.png",
     imgWidth: 1920,
