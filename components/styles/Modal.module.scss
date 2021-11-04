@@ -80,7 +80,7 @@
       justify-content: space-between;
       width: 100%;
       min-height: auto;
-      height: calc(100vh - 80px);
+      max-height: calc(100vh - 80px);
       margin: 0 10px;
       padding: 18px 16px;
       overflow-y: scroll;
