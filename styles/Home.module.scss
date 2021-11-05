@@ -5,7 +5,11 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  min-height: calc(100vh - 200px);
+  min-height: calc(100vh - 220px);
+
+  @include mq(md) {
+    min-height: calc(100vh - 200px);
+  }
 
   .homeName {
     font-size: 8.4rem;
@@ -27,7 +31,7 @@
 
   @include mq(sm) {
     .homeName {
-      font-size: 5.0rem;
+      font-size: 5rem;
     }
     .text {
       font-size: 2.8rem;
