@@ -39,7 +39,9 @@ const Contact = () => {
                 height={48}
               />
             </span>
-            <p className={styles.email}>y.y.dizwpgar@gmail.com</p>
+            <p className={styles.email}>
+              <span>y.y.dizwpgar@gmail.com</span>
+            </p>
           </div>
 
           <section className={styles.linkSection}>

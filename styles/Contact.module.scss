@@ -30,7 +30,7 @@ $iconSize: 48px;
     max-width: 420px;
     margin: 16px auto 0;
     border: 1px solid $grayBorderColor;
-    padding: 20px 40px;
+    padding-left: 40px;
     border-radius: 4px;
     word-break: break-all;
 
@@ -53,6 +53,26 @@ $iconSize: 48px;
         margin-left: math.div(-$iconSize, 2);
         border-radius: 50%;
         z-index: 10;
+      }
+    }
+    .email {
+      padding: 20px 40px 20px 20px;
+      cursor: text;
+
+      span {
+        transition: $transitionSpeed;
+        padding: 0 4px;
+
+        &::selection {
+          color: #ffffff;
+          background-color: $baseColor;
+        }
+      }
+
+      &:hover {
+        span {
+          color: $baseColor;
+        }
       }
     }
   }
