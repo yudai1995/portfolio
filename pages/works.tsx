@@ -24,7 +24,8 @@ const tecs = [
   "Node.js",
   "Express",
   "MySQL",
-  "Socket.IO"
+  "Socket.IO",
+  "tailwindcss"
 ];
 const tecList = tecs.map((tec, index) => new Tec(index, tec));
 
@@ -94,7 +95,7 @@ const works: {
     imgWidth: 1690,
     imgHeight: 1404,
     imgLayout: "responsive",
-    tecNum: [0, 2, 6, 8, 4, 9, 10, 12],
+    tecNum: [0, 6, 8, 4, 9, 10, 12],
     link: [
       {
         pagename: "GitHub",
@@ -119,6 +120,37 @@ const works: {
   },
   {
     id: 2,
+    name: "天候検索ツール",
+    imgSrc: "/images/works/weather-search-tool-img01.png",
+    imgWidth: 1690,
+    imgHeight: 1404,
+    imgLayout: "responsive",
+    tecNum: [0, 4, 7, 13],
+    link: [
+      {
+        pagename: "GitHub",
+        url: "https://github.com/YUDAI1995/weather-search-tool",
+        imgSrc: "/images/github-icon01.png",
+        linkIcon: "",
+        linkWidth: 64,
+        linkHeight: 64,
+      },
+      {
+        pagename: "サイト",
+        url: "https://weather-search-tool.vercel.app",
+        imgSrc: "/images/webpage-icon01.png",
+        linkIcon: "",
+        linkWidth: 64,
+        linkHeight: 64,
+      },
+    ],
+    comment: [
+      "地図検索と検索地域の天候が確認できるツールです。",
+      "地図と天候の情報はGoogle MapsとOpen WeatherのAPIを使用させていただいております。"
+    ],
+  },
+  {
+    id: 3,
     name: "舞台照明シミュレーションツール",
     imgSrc: "/images/works/stage-lighting-simulation-img01.png",
     imgWidth: 1920,
