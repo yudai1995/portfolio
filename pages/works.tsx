@@ -25,7 +25,7 @@ const tecs = [
   "Express",
   "MySQL",
   "Socket.IO",
-  "tailwindcss"
+  "tailwindcss",
 ];
 const tecList = tecs.map((tec, index) => new Tec(index, tec));
 
@@ -122,8 +122,8 @@ const works: {
     id: 2,
     name: "天候検索ツール",
     imgSrc: "/images/works/weather-search-tool-img01.png",
-    imgWidth: 1690,
-    imgHeight: 1404,
+    imgWidth: 2048,
+    imgHeight: 1666,
     imgLayout: "responsive",
     tecNum: [0, 4, 7, 13],
     link: [
@@ -146,7 +146,7 @@ const works: {
     ],
     comment: [
       "地図検索と検索地域の天候が確認できるツールです。",
-      "地図と天候の情報はGoogle MapsとOpen WeatherのAPIを使用させていただいております。"
+      "地図と天候の情報はGoogle MapsとOpen WeatherのAPIを使用させていただいております。",
     ],
   },
   {

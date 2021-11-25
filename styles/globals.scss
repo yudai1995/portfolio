@@ -100,7 +100,7 @@ main {
   color: #ffffff;
   width: 100%;
   min-height: 72px;
-  border-bottom: 4px solid $linkBtnBorderColor;
+  border-bottom: 6px solid $linkBtnBorderColor;
   border-radius: 6px;
   padding: 6px 48px 6px 80px;
   background-color: $linkBtnColor;
@@ -134,7 +134,7 @@ main {
 
   &:hover {
     background-color: $linkBtnHoverColor;
-    border-bottom: 4px solid $linkBtnHoverBorderColor;
+    border-bottom: 6px solid $linkBtnHoverBorderColor;
   }
 }
 
