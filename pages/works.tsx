@@ -1,40 +1,42 @@
-import Head from "next/dist/shared/lib/head";
-import Image from "next/image";
-import { useState } from "react";
-import Layout from "../components/Layout/Layout";
-import ContentLayout from "../components/Layout/ContentLayout";
-import LinkLayout from "../components/Layout/LinkLayout";
-import Modal from "../components/Modal";
-import styles from "../styles/Works.module.scss";
+import Head from 'next/dist/shared/lib/head';
+import Image from 'next/image';
+import { useState } from 'react';
+import Layout from '../components/Layout/Layout';
+import ContentLayout from '../components/Layout/ContentLayout';
+import LinkLayout from '../components/Layout/LinkLayout';
+import Modal from '../components/Modal';
+import styles from '../styles/Works.module.scss';
 
 // 仕様種類
 class Tec {
   constructor(public id: number, public name: string) {}
 }
 const tecs = [
-  "HTML",
-  "CSS",
-  "Sass",
-  "JavaScript",
-  "TypeScript",
-  "Three.js",
-  "React",
-  "Next.js",
-  "Redux",
-  "Node.js",
-  "Express",
-  "MySQL",
-  "Socket.IO",
-  "tailwindcss",
+  'HTML',
+  'CSS',
+  'Sass',
+  'JavaScript',
+  'TypeScript',
+  'Three.js',
+  'React',
+  'Next.js',
+  'Redux',
+  'Node.js',
+  'Express',
+  'MySQL',
+  'Socket.IO',
+  'Tailwind CSS',
+  'MongoDB',
+  'Vue.js',
 ];
 const tecList = tecs.map((tec, index) => new Tec(index, tec));
 
 // インスタンスから表示する文字列を返す
 const getTectText = (tecNum: number[]): string => {
-  let text = "";
+  let text = '';
   tecNum.forEach((num) => {
-    if (text === "") text += tecList[num].name;
-    else text += ", " + tecList[num].name;
+    if (text === '') text += tecList[num].name;
+    else text += ', ' + tecList[num].name;
   });
   return text;
 };
@@ -45,7 +47,7 @@ const works: {
   imgSrc: string;
   imgWidth: number;
   imgHeight: number;
-  imgLayout: "responsive" | "fixed" | "fill" | "intrinsic";
+  imgLayout: 'responsive' | 'fixed' | 'fill' | 'intrinsic';
   tecNum: number[];
   link?: {
     pagename: string;
@@ -59,107 +61,138 @@ const works: {
 }[] = [
   {
     id: 0,
-    name: "家計簿管理ツール",
-    imgSrc: "/images/works/budget-management-tool-img01.png",
+    name: '家計簿管理ツール',
+    imgSrc: '/images/works/budget-management-tool-img01.png',
     imgWidth: 1284,
     imgHeight: 963,
-    imgLayout: "responsive",
+    imgLayout: 'responsive',
     tecNum: [0, 2, 6, 8, 4, 9, 10, 11],
     link: [
       {
-        pagename: "GitHub",
-        url: "https://github.com/YUDAI1995/budget-management-tool",
-        imgSrc: "/images/github-icon01.png",
-        linkIcon: "",
+        pagename: 'GitHub',
+        url: 'https://github.com/YUDAI1995/budget-management-tool',
+        imgSrc: '/images/github-icon01.png',
+        linkIcon: '',
         linkWidth: 64,
         linkHeight: 64,
       },
       {
-        pagename: "サイト",
-        url: "https://budget-management-tool.herokuapp.com/",
-        imgSrc: "/images/webpage-icon01.png",
-        linkIcon: "",
+        pagename: 'サイト',
+        url: 'https://budget-management-tool.herokuapp.com/',
+        imgSrc: '/images/webpage-icon01.png',
+        linkIcon: '',
         linkWidth: 64,
         linkHeight: 64,
       },
     ],
     comment: [
-      "現金支出を、より管理しやすいようにしたいという思いがあり、作成したサイトです。",
-      "目的、仕様の考案やAdobe XDを用いてのワイヤーフレームも作成をしました。",
+      '現金支出を、より管理しやすいようにしたいという思いがあり、作成したサイトです。',
+      '目的、仕様の考案やAdobe XDを用いてのワイヤーフレームも作成をしました。',
     ],
   },
   {
     id: 1,
-    name: "チャットツール",
-    imgSrc: "/images/works/chatapp-img01.png",
-    imgWidth: 1690,
-    imgHeight: 1404,
-    imgLayout: "responsive",
-    tecNum: [0, 6, 8, 4, 9, 10, 12],
+    name: '天候検索ツール',
+    imgSrc: '/images/works/weather-search-tool-img01.png',
+    imgWidth: 2048,
+    imgHeight: 1666,
+    imgLayout: 'responsive',
+    tecNum: [0, 4, 7, 8, 13, 14],
     link: [
       {
-        pagename: "GitHub",
-        url: "https://github.com/YUDAI1995/react-chatapp",
-        imgSrc: "/images/github-icon01.png",
-        linkIcon: "",
+        pagename: 'GitHub',
+        url: 'https://github.com/YUDAI1995/weather-search-tool',
+        imgSrc: '/images/github-icon01.png',
+        linkIcon: '',
         linkWidth: 64,
         linkHeight: 64,
       },
       {
-        pagename: "サイト",
-        url: "https://y1995-chatapp.herokuapp.com",
-        imgSrc: "/images/webpage-icon01.png",
-        linkIcon: "",
+        pagename: 'サイト',
+        url: 'https://weather-search-tool.vercel.app',
+        imgSrc: '/images/webpage-icon01.png',
+        linkIcon: '',
         linkWidth: 64,
         linkHeight: 64,
       },
     ],
     comment: [
-      "ReactとSocket.IOを用いてリアルタイムでチャットできるツールを作成しました。",
+      '地図検索と検索地域の天候が確認できるツールです。',
+      '地図と天候の情報はGoogle MapsとOpen WeatherのAPIを使用させていただいております。',
     ],
   },
   {
     id: 2,
-    name: "天候検索ツール",
-    imgSrc: "/images/works/weather-search-tool-img01.png",
-    imgWidth: 2048,
-    imgHeight: 1666,
-    imgLayout: "responsive",
-    tecNum: [0, 4, 7, 13],
+    name: 'チャットツール (React)',
+    imgSrc: '/images/works/chatapp-img01.png',
+    imgWidth: 1690,
+    imgHeight: 1404,
+    imgLayout: 'responsive',
+    tecNum: [0, 2, 6, 8, 4, 9, 10, 12],
     link: [
       {
-        pagename: "GitHub",
-        url: "https://github.com/YUDAI1995/weather-search-tool",
-        imgSrc: "/images/github-icon01.png",
-        linkIcon: "",
+        pagename: 'GitHub',
+        url: 'https://github.com/YUDAI1995/react-chatapp',
+        imgSrc: '/images/github-icon01.png',
+        linkIcon: '',
         linkWidth: 64,
         linkHeight: 64,
       },
       {
-        pagename: "サイト",
-        url: "https://weather-search-tool.vercel.app",
-        imgSrc: "/images/webpage-icon01.png",
-        linkIcon: "",
+        pagename: 'サイト',
+        url: 'https://y1995-chatapp.herokuapp.com',
+        imgSrc: '/images/webpage-icon01.png',
+        linkIcon: '',
         linkWidth: 64,
         linkHeight: 64,
       },
     ],
     comment: [
-      "地図検索と検索地域の天候が確認できるツールです。",
-      "地図と天候の情報はGoogle MapsとOpen WeatherのAPIを使用させていただいております。",
+      'ReactとSocket.IOを用いてリアルタイムでチャットできるツールを作成しました。',
     ],
   },
   {
     id: 3,
-    name: "舞台照明シミュレーションツール",
-    imgSrc: "/images/works/stage-lighting-simulation-img01.png",
+    name: 'チャットツール (Vue.js)',
+    imgSrc: '/images/works/chatapp-img01.png',
+    imgWidth: 1690,
+    imgHeight: 1404,
+    imgLayout: 'responsive',
+    tecNum: [0, 2, 15, 3, 9, 10, 12],
+    link: [
+      {
+        pagename: 'GitHub',
+        url: 'https://github.com/YUDAI1995/vue-chatapp',
+        imgSrc: '/images/github-icon01.png',
+        linkIcon: '',
+        linkWidth: 64,
+        linkHeight: 64,
+      },
+      {
+        pagename: 'サイト',
+        url: 'https://y1995-chatvueapp.herokuapp.com/',
+        imgSrc: '/images/webpage-icon01.png',
+        linkIcon: '',
+        linkWidth: 64,
+        linkHeight: 64,
+      },
+    ],
+    comment: [
+      'Vue.jsとSocket.IOを用いたチャットツールです。',
+      'React.jsと同仕様のものをVue.jsを用いて作成したものです。',
+    ],
+  },
+  {
+    id: 4,
+    name: '舞台照明シミュレーションツール',
+    imgSrc: '/images/works/stage-lighting-simulation-img01.png',
     imgWidth: 1920,
     imgHeight: 967,
-    imgLayout: "responsive",
+    imgLayout: 'responsive',
     tecNum: [0, 1, 3, 5, 9, 10],
     comment: [
-      "舞台機構設営前の照明シミュレーションを目的に、学生時に作成したものです。",
-      "Three.jsを用いて3Dモデリングを行いました。",
+      '舞台機構設営前の照明シミュレーションを目的に、学生時に作成したものです。',
+      'Three.jsを用いて3Dモデリングを行いました。',
     ],
   },
 ];
@@ -177,16 +210,16 @@ const Works = () => {
   };
 
   // サブタイトル
-  const subTitle = "主な仕様環境";
+  const subTitle = '主な仕様環境';
 
   return (
     <Layout>
       <Head>
         <title>Works | Yudai Yamamoto</title>
-        <meta name="description" content="制作物を掲載しております" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name='description' content='制作物を掲載しております' />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
-      <ContentLayout title="Works">
+      <ContentLayout title='Works'>
         <>
           <div className={styles.worksWrapper}>
             {works.map((work) => (
@@ -252,30 +285,30 @@ const Works = () => {
               <div
                 className={styles.content}
                 onClick={() =>
-                  onOpenModalHandler("Yudai Yamamoto ポートフォリオ")
+                  onOpenModalHandler('Yudai Yamamoto ポートフォリオ')
                 }
               >
                 <figure className={styles.img}>
                   <Image
-                    src="/images/works/my-portfolio-img01.png"
+                    src='/images/works/my-portfolio-img01.png'
                     className={styles.thumb}
-                    alt="Yudai Yamamoto ポートフォリオ"
-                    layout={"responsive"}
+                    alt='Yudai Yamamoto ポートフォリオ'
+                    layout={'responsive'}
                     width={1584}
                     height={934}
                   />
                 </figure>
               </div>
               <h2 className={styles.title}>
-                <span className="logoName">Yudai Yamamoto</span> ポートフォリオ
+                <span className='logoName'>Yudai Yamamoto</span> ポートフォリオ
               </h2>
               <Modal
-                isShow={"Yudai Yamamoto ポートフォリオ" === selectedItem}
+                isShow={'Yudai Yamamoto ポートフォリオ' === selectedItem}
                 onClose={onCloseModalHandler}
               >
                 <section className={styles.detail}>
                   <h2 className={styles.title}>
-                    <span className="logoName">Yudai Yamamoto</span>{" "}
+                    <span className='logoName'>Yudai Yamamoto</span>{' '}
                     ポートフォリオ
                   </h2>
                   <h3 className={styles.subTitle}>{subTitle}</h3>
@@ -286,9 +319,9 @@ const Works = () => {
                   <ul className={`${styles.linkList} col1`}>
                     <li className={`${styles.list} arrowIcon`}>
                       <LinkLayout
-                        url="https://github.com/YUDAI1995/my-portfolio-site"
-                        name="GitHub"
-                        imgSrc="/images/github-icon01.png"
+                        url='https://github.com/YUDAI1995/my-portfolio-site'
+                        name='GitHub'
+                        imgSrc='/images/github-icon01.png'
                         imgWidth={64}
                         imgHeight={64}
                       />
@@ -302,9 +335,9 @@ const Works = () => {
             <p className={styles.text}>よろしければGitHubもご覧ください。</p>
             <p className={`${styles.link} arrowIcon`}>
               <LinkLayout
-                url="https://github.com/YUDAI1995"
-                name="GitHub"
-                imgSrc="/images/github-icon01.png"
+                url='https://github.com/YUDAI1995'
+                name='GitHub'
+                imgSrc='/images/github-icon01.png'
                 imgWidth={64}
                 imgHeight={64}
               />
