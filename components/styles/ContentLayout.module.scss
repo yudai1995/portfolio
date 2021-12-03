@@ -1,7 +1,13 @@
+@import '../../styles/Base/_variable.scss';
+
 .contentSection {
   .contentTitle {
     font-size: 4.2rem;
     margin: 0;
     margin-bottom: 32px;
+
+    @include mq(md) {
+      font-size: 3.6rem;
+    }
   }
 }

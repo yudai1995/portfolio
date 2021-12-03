@@ -35,7 +35,7 @@ const About = () => {
             <div className={styles.profile}>
               <p>法政大学情報科学部 2019年卒業。</p>
               <p>
-                大学卒業後、Webサイト構築を行う会社へ入社。ネット証券会社のWebサイト担当として2年勤務。
+                大学卒業後、Webサイト構築を行う会社へ入社。インターネット証券会社のWebサイト担当として2年勤務。
                 <br />
                 企業サイトのデザイン、HTML, CSS,
                 JavaScript(jQuery)を用いての制作や

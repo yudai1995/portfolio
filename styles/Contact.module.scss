@@ -1,8 +1,5 @@
-@use "sass:math";
-@import "variable";
-
-$iconImgSize: 32px;
-$iconSize: 48px;
+@use 'sass:math';
+@import 'variable';
 
 .contentWrapper {
   min-height: 500px;
@@ -24,26 +21,31 @@ $iconSize: 48px;
   }
 
   .emailWrapper {
+    position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
     background-color: #ffffff;
-    max-width: 420px;
+    width: 420px;
+    max-width: 100%;
     margin: 16px auto 0;
+    padding: 6px 20px 6px 86px;
     border: 1px solid $grayBorderColor;
-    padding-left: 40px;
     border-radius: 4px;
     word-break: break-all;
 
     .emailIcon {
-      position: relative;
+      position: absolute;
       width: $iconImgSize;
       height: 24px;
-      margin-right: 42px;
+      top: 50%;
+      left: 28px;
+      margin-top: math.div(-24px, 2);
 
       &::after {
         position: absolute;
         display: inline-block;
-        content: "";
+        content: '';
         background-color: #ebebeb;
         width: $iconSize;
         height: $iconSize;
@@ -81,31 +83,25 @@ $iconSize: 48px;
     min-height: 400px;
 
     .emailWrapper {
-      max-width: 100%;
       width: 100%;
-      padding: 16px 10px 16px 20px;
-      justify-content: center;
+      padding-right: 0;
 
       .emailIcon {
-        position: relative;
-        width: $iconImgSize;
-        height: 24px;
-        margin-right: 42px;
+        width: $iconImgSizeMD;
+        height: 21px;
+        left: 40px;
+        margin-top: math.div(-20px, 2);
 
         &::after {
-          position: absolute;
-          display: inline-block;
-          content: "";
-          background-color: #ebebeb;
-          width: $iconSize;
-          height: $iconSize;
-          top: 50%;
-          left: 50%;
-          margin-top: math.div(-$iconSize, 2);
-          margin-left: math.div(-$iconSize, 2);
-          border-radius: 50%;
-          z-index: 10;
+          width: $iconSizeMD;
+          height: $iconSizeMD;
+          margin-top: math.div(-$iconSizeMD, 2);
+          margin-left: math.div(-$iconSizeMD, 2);
         }
+      }
+
+      .email {
+        padding: 20px 20px 20px 20px;
       }
     }
   }
@@ -115,6 +111,10 @@ $iconSize: 48px;
     .subTitle {
       font-size: 3.2rem;
       text-align: center;
+
+      @include mq(sm) {
+        font-size: 2.4rem;
+      }
     }
 
     .linkList {

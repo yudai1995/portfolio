@@ -1,4 +1,4 @@
-@import "variable";
+@import 'variable';
 
 .overlay {
   display: flex;
@@ -55,7 +55,7 @@
       &::after {
         position: absolute;
         display: inline-block;
-        content: "";
+        content: '';
         width: 12px;
         height: 2px;
         background-color: #ffffff;
@@ -81,6 +81,7 @@
       flex-direction: column;
       justify-content: space-between;
       width: 100%;
+      height: auto;
       min-height: auto;
       max-height: calc(100vh - 80px);
       margin: 0 10px;
