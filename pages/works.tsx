@@ -179,7 +179,7 @@ const works: {
     ],
     comment: [
       'Vue.jsとSocket.IOを用いたチャットツールです。',
-      'React.jsと同仕様のものをVue.jsを用いて作成したものです。',
+      'Reactで作成したものをVue.jsを用いて置きかえたものです。',
     ],
   },
   {

@@ -88,6 +88,23 @@ main {
   &::after {
     transform: rotate(-45deg) translateY(8px);
   }
+
+  @include mq(md) {
+    &::before,
+    &::after {
+      width: 16px;
+      height: 4px;
+      margin-top: -2px;
+    }
+
+    &::before {
+      transform: rotate(45deg) translateY(-6px);
+    }
+
+    &::after {
+      transform: rotate(-45deg) translateY(6px);
+    }
+  }
 }
 
 .pageLink {
