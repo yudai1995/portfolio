@@ -37,9 +37,9 @@ const About = () => {
               <p>
                 大学卒業後、Webサイト構築を行う会社へ入社。インターネット証券会社のWebサイト担当として2年勤務。
                 <br />
-                企業サイトのデザインやHTML, CSS,
-                JavaScript,jQueryを用いての制作や
-                CMSを用いた更新運用を担当いたしました。
+                企業サイトのデザインとHTML, CSS,
+                JavaScript,jQueryを用いての実装や
+                CMSを用いた更新運用を担当させて頂きました。
               </p>
             </div>
           </section>
