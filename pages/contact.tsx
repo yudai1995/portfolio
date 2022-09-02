@@ -4,6 +4,7 @@ import Layout from '../components/Layout/Layout';
 import ContentLayout from '../components/Layout/ContentLayout';
 import LinkLayout from '../components/Layout/LinkLayout';
 import styles from '../styles/Contact.module.scss';
+import React from 'react';
 const links = [
   {
     name: 'GitHub',
@@ -16,7 +17,32 @@ const links = [
     img: '/images/wantdly-icon01.png',
   },
 ];
+const email = 'y.y.dizwpgar@gmail.com';
 const Contact = () => {
+  const [copyed, setCopyed] = React.useState(false);
+  const copyEmailToClipboard = (e) => {
+    navigator.clipboard.writeText(email).then(
+      function () {
+        e.target.classList.add('copyed');
+        setTimeout(() => {
+          setCopyed(false);
+          e.target.classList.remove('copyed');
+        }, 1000);
+      },
+      function (err) {
+        console.error('[Error] Could not copy text: ', err);
+      }
+    );
+  };
+
+  const isClickEmail = (e) => {
+    if (e.target.innerHTML === email) {
+      setCopyed(true);
+    } else {
+      setCopyed(false);
+    }
+  };
+
   return (
     <Layout>
       <Head>
@@ -25,7 +51,7 @@ const Contact = () => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <ContentLayout title='Contact'>
-        <div className={styles.contentWrapper}>
+        <div className={styles.contentWrapper} onClick={isClickEmail}>
           <div className='email'>
             <p className={styles.text}>ご連絡はEmailよりお願いいたします。</p>
             <div className={styles.emailWrapper}>
@@ -39,9 +65,24 @@ const Contact = () => {
                   height={48}
                 />
               </span>
-              <p className={styles.email}>
-                <span>y.y.dizwpgar@gmail.com</span>
+              <p className={`${styles.emailAddress} emailAddress`} onClick={copyEmailToClipboard}>{email}</p>
+              <p className={styles.clipBoard}>
+                <span
+                  className={styles.copy}
+                  style={{ display: copyed ? 'none' : 'block' }}
+                >
+                  Copy
+                </span>
+                <span style={{ display: copyed ? 'block' : 'none' }}>
+                  Copyed!
+                </span>
               </p>
+              <style jsx>{`
+                .copyed .emailAddress {
+                  color: #ffffff;
+                  background-color: #00a885;
+                }
+              `}</style>
             </div>
           </div>
           <section className={styles.linkSection}>
