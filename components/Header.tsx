@@ -1,6 +1,5 @@
 import GlobalNavi from "./GlobalNavi";
 import Link from "next/dist/client/link";
-import LogoNameLayout from "./Layout/LogoNameLayout";
 import styles from "./styles/Header.module.scss";
 
 const Header: React.FC = () => {
