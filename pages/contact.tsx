@@ -22,14 +22,12 @@ const Contact = () => {
   const [copyed, setCopyed] = React.useState(false);
   const copyEmailToClipboard = (e) => {
     navigator.clipboard.writeText(email).then(
-      function () {
-        e.target.classList.add('copyed');
+      () => {
         setTimeout(() => {
           setCopyed(false);
-          e.target.classList.remove('copyed');
-        }, 1000);
+        }, 500);
       },
-      function (err) {
+      (err) => {
         console.error('[Error] Could not copy text: ', err);
       }
     );
@@ -65,7 +63,12 @@ const Contact = () => {
                   height={48}
                 />
               </span>
-              <p className={`${styles.emailAddress} emailAddress`} onClick={copyEmailToClipboard}>{email}</p>
+              <p
+                className={`${styles.emailAddress} emailAddress`}
+                onClick={copyEmailToClipboard}
+              >
+                {email}
+              </p>
               <p className={styles.clipBoard}>
                 <span
                   className={styles.copy}
@@ -85,7 +88,7 @@ const Contact = () => {
               `}</style>
             </div>
           </div>
-          <section className={styles.linkSection}>
+          <section id='test' className={styles.linkSection}>
             <h3 className={styles.subTitle}>Link</h3>
             <ul className={styles.linkList}>
               {links.map((link, index) => (
