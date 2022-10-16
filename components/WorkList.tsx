@@ -115,7 +115,7 @@ const WorkList: React.FC = () => {
               <ul className={`${styles.linkList} col1`}>
                 <li className={`${styles.list} arrowIcon`}>
                   <LinkLayout
-                    url='https://github.com/YUDAI1995/my-portfolio-site'
+                    url='https://github.com/YUDAI1995/yyudai1995'
                     name='GitHub'
                     imgSrc='/images/github-icon01.png'
                     imgWidth={64}
