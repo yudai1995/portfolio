@@ -8,7 +8,7 @@ const content = [
   { title: "名前", description: "山本 祐大" },
   { title: "生年月日", description: "1995年11月12日" },
   { title: "出身地", description: "千葉県柏市" },
-  { title: "趣味", description: "映画、音楽鑑賞、旅行" },
+  { title: "趣味", description: "映画・音楽鑑賞" },
 ];
 const About = () => {
   return (
@@ -34,13 +34,11 @@ const About = () => {
             </dl>
             <div className={styles.profile}>
               <p>法政大学情報科学部 2019年卒業。</p>
-              <p>現在はAngularを用いたWebアプリ製品の開発をしております。<br />画面設計・フロントエンド開発に携わらせていただいております。</p>
+              <p>現在はSaaS製品の開発に携わらせていただいており、フロントエンド開発を担当。</p>
               <p>
-                大学卒業後、Webサイト構築を行う会社へ入社。インターネット証券会社のWeb制作を2年担当させて頂きました。
+                大学卒業後にWeb制作会社へ入社。<br />インターネット証券会社のWeb制作を2年担当させていただきました。
                 <br />
-                コーポレートサイトのデザインとHTML, CSS,
-                JavaScript,jQueryを用いてのWebページ作成や<br />
-                CMSを用いた更新運用を担当させていただきました。
+                コーポレートサイトのデザイン・Webページ制作やCMSを用いた更新運用に従事しておりました。
               </p>
             </div>
           </section>
