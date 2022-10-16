@@ -2,32 +2,22 @@
 
 .grobalnavList {
   display: flex;
+  font-weight: bold;
 
   .navListItem {
     & + .navListItem {
-      margin-left: 20px;
+      margin-left: 10px;
     }
     a {
       position: relative;
       display: block;
-      padding: 12px 20px;
-
-      &::after {
-        position: absolute;
-        display: inline-block;
-        content: '';
-        background-color: $baseColor;
-        width: 0;
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        transition: $transitionSpeed;
-      }
+      border-radius: 2px;
+      padding: 6px 16px;
+      transition: $transitionSpeed;
 
       &:hover {
-        &::after {
-          width: 100%;
-        }
+        background-color: #added6;
+        color: #ffffff;
       }
     }
   }
@@ -54,8 +44,19 @@
       }
 
       a {
-        &::after {
-          display: none;
+        &:hover {
+          background-color: #ffffff;
+          color: $defaultTextColor;
+        }
+      }
+    }
+
+    :global {
+      .isActive {
+        a {
+          &:hover {
+            color: $baseColor;  
+          }
         }
       }
     }

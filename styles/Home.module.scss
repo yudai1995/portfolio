@@ -1,40 +1,105 @@
-@import "variable";
+@import 'variable';
 
 .homeWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  min-height: calc(100vh - 220px);
+  text-align: center;
 
-  @include mq(md) {
-    min-height: calc(100vh - 200px);
+  .scroll {
+    height: 60px;
+    cursor: pointer;
+
+    @include mq(md) {
+      height: 60px;
+    }
+
+    &:hover {
+      .scrollButton {
+        color: $baseColor;
+        &::after {
+          background-color: $baseColor;
+        }
+      }
+    }
+
+    .scrollButton {
+      position: relative;
+      background-color: #ffffff;
+      font-weight: bold;
+      border: 0;
+      cursor: pointer;
+      transition: color $transitionSpeed;
+
+      &::after {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        bottom: calc(-100% - 20px);
+        left: 50%;
+        width: 2px;
+        height: 40px;
+        background-color: #555555;
+        animation: lineAnimation 4s ease-in-out infinite;
+        opacity: 1;
+      }
+
+      @keyframes lineAnimation {
+        0% {
+          height: 40px;
+          bottom: calc(-100% - 20px);
+          opacity: 0;
+        }
+        30% {
+          height: 40px;
+          bottom: calc(-100% - 20px);
+          opacity: 0;
+        }
+        50% {
+          height: 0;
+          opacity: 1;
+        }
+        100% {
+          height: 0;
+          bottom: calc(-100% - 20px);
+          opacity: 1;
+        }
+      }
+    }
   }
+  .introduction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: calc(100vh - 164px);
 
-  .homeName {
-    font-size: 8.4rem;
-    margin: 0;
-    margin-bottom: 20px;
+    @include mq(md) {
+      min-height: calc(100vh - 160px);
+    }
 
-    @include mq(lg) {
-      font-size: 7.2rem;
+    .homeName {
+      font-size: 8.4rem;
+      margin: 0;
+      margin-bottom: 20px;
+
+      @include mq(lg) {
+        font-size: 7.2rem;
+      }
+
+      @include mq(sm) {
+        font-size: 6.4rem;
+      }
+    }
+    .text {
+      margin: 0;
+      font-size: 3rem;
     }
 
     @include mq(sm) {
-      font-size: 6.4rem;
-    }
-  }
-  .text {
-    margin: 0;
-    font-size: 3rem;
-  }
-
-  @include mq(sm) {
-    .homeName {
-      font-size: 5rem;
-    }
-    .text {
-      font-size: 2.8rem;
+      .homeName {
+        font-size: 5rem;
+      }
+      .text {
+        font-size: 2.8rem;
+      }
     }
   }
 }
