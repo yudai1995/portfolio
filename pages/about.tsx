@@ -21,9 +21,6 @@ const About = () => {
       <Layout>
         <ContentLayout title="About">
           <section className={styles.aboutSection}>
-            <h2 className={styles.aboutName}>
-              <LogoNameLayout />
-            </h2>
             <dl className={styles.contentList}>
               {content.map((item, index) => (
                 <div key={index} className={styles.contentWrapper}>
