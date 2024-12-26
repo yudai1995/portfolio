@@ -8,7 +8,6 @@ interface LinkLayout {
   imgHeight: number;
 }
 
-
 // 外部リンクのレイアウト
 const LinkLayout: React.FC<LinkLayout> = ({
   name,
@@ -18,6 +17,7 @@ const LinkLayout: React.FC<LinkLayout> = ({
   imgHeight,
 }) => {
   return (
+    <>
     <a href={url} target="_blank" className="pageLink" rel="noreferrer">
       <span className="linkIcon">
         <Image
@@ -30,6 +30,7 @@ const LinkLayout: React.FC<LinkLayout> = ({
       </span>
       {name}
     </a>
+    </>
   );
 };
 
