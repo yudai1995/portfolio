@@ -24,7 +24,6 @@ const LinkLayout: React.FC<LinkLayout> = ({
           src={imgSrc}
           className="icon"
           alt={name}
-          layout={"intrinsic"}
           width={imgWidth}
           height={imgHeight}
         />

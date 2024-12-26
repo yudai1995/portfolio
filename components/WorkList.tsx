@@ -35,7 +35,6 @@ const WorkList: React.FC = () => {
                   src={work.imgSrc}
                   className={styles.thumb}
                   alt={work.name}
-                  layout={work.imgLayout}
                   width={work.imgWidth}
                   height={work.imgHeight}
                 />
@@ -88,7 +87,6 @@ const WorkList: React.FC = () => {
                 src='/images/works/my-portfolio-img01.png'
                 className={styles.thumb}
                 alt='Yudai Yamamoto ポートフォリオ'
-                layout={'responsive'}
                 width={2400}
                 height={1120}
               />
