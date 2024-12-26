@@ -132,21 +132,9 @@ main {
     margin-top: math.div(-($iconImgSize + 4), 2);
     top: 50%;
     left: 28px;
-
-    &::after {
-      position: absolute;
-      display: inline-block;
-      content: '';
-      background-color: #f8fffe;
-      width: $iconSize;
-      height: $iconSize;
-      top: 50%;
-      left: 50%;
-      margin-top: math.div(-$iconSize, 2);
-      margin-left: math.div(-$iconSize, 2);
-      border-radius: 50%;
-      z-index: 10;
-    }
+    background-color: #f8fffe;
+    padding: 6px;
+    border-radius: 50%;
   }
 
   &:hover {
@@ -177,5 +165,5 @@ main {
 }
 
 .icon {
-  z-index: 100;
+  z-index: 100!important;
 }

@@ -37,26 +37,14 @@
 
     .emailIcon {
       position: absolute;
-      width: $iconImgSize;
-      height: 24px;
+      width: 42px;
+      height: 42px;
       top: 50%;
       left: 28px;
       margin-top: math.div(-24px, 2);
-
-      &::after {
-        position: absolute;
-        display: inline-block;
-        content: '';
-        background-color: #ebebeb;
-        width: $iconSize;
-        height: $iconSize;
-        top: 50%;
-        left: 50%;
-        margin-top: math.div(-$iconSize, 2);
-        margin-left: math.div(-$iconSize, 2);
-        border-radius: 50%;
-        z-index: 10;
-      }
+      background-color: #ebebeb;
+      padding: 6px;
+      border-radius: 100%;
     }
     .emailAddress {
       cursor: pointer;
@@ -97,8 +85,8 @@
       padding-right: 0;
 
       .emailIcon {
-        width: $iconImgSizeMD;
-        height: 21px;
+        width: 40px;
+        height: 40px;
         left: 40px;
         margin-top: math.div(-20px, 2);
 
