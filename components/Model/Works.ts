@@ -25,7 +25,7 @@ export const works: {
       imgWidth: 1284,
       imgHeight: 963,
       imgLayout: 'responsive',
-      tecNum: [0, 2, 6, 8, 4, 9, 10, 11],
+      tecNum: [6, 8, 4, 9, 10, 11, 2],
       link: [
         {
           pagename: 'GitHub',
@@ -48,20 +48,12 @@ export const works: {
       imgWidth: 2048,
       imgHeight: 1666,
       imgLayout: 'responsive',
-      tecNum: [0, 4, 7, 8, 13, 14],
+      tecNum: [7, 8, 4, 13, 14],
       link: [
         {
           pagename: 'GitHub',
           url: 'https://github.com/YUDAI1995/weather-search-tool',
           imgSrc: '/images/github-icon01.png',
-          linkIcon: '',
-          linkWidth: 64,
-          linkHeight: 64,
-        },
-        {
-          pagename: 'サイト',
-          url: 'https://weather-search-tool.vercel.app',
-          imgSrc: '/images/webpage-icon01.png',
           linkIcon: '',
           linkWidth: 64,
           linkHeight: 64,
@@ -79,7 +71,7 @@ export const works: {
       imgWidth: 1690,
       imgHeight: 1404,
       imgLayout: 'responsive',
-      tecNum: [0, 2, 6, 8, 4, 9, 10, 12],
+      tecNum: [6, 8, 4, 9, 10, 12, 2],
       link: [
         {
           pagename: 'GitHub',
@@ -101,7 +93,7 @@ export const works: {
       imgWidth: 1690,
       imgHeight: 1404,
       imgLayout: 'responsive',
-      tecNum: [0, 2, 15, 3, 9, 10, 12],
+      tecNum: [15, 3, 9, 10, 12, 2],
       link: [
         {
           pagename: 'GitHub',
@@ -124,7 +116,7 @@ export const works: {
       imgWidth: 1920,
       imgHeight: 967,
       imgLayout: 'responsive',
-      tecNum: [0, 1, 3, 5, 9, 10],
+      tecNum: [3, 5, 9, 10, 1],
       comment: [
         '舞台機構設営前の照明シミュレーションを目的に、学生時に作成したものです。',
         'Three.jsを用いて3Dモデリングを行いました。',

@@ -19,7 +19,7 @@ const WorkList: React.FC = () => {
   };
 
   // サブタイトル
-  const subTitle = '主な仕様環境';
+  const subTitle = '主な使用技術';
 
   return (
     <ContentLayout title='Works'>
@@ -89,8 +89,8 @@ const WorkList: React.FC = () => {
                 className={styles.thumb}
                 alt='Yudai Yamamoto ポートフォリオ'
                 layout={'responsive'}
-                width={1584}
-                height={934}
+                width={2400}
+                height={1120}
               />
             </figure>
           </div>
@@ -107,7 +107,7 @@ const WorkList: React.FC = () => {
               </h2>
               <h3 className={styles.subTitle}>{subTitle}</h3>
               <p className={styles.text}>
-                {getTechnologyListText([0, 2, 7, 4])}
+                {getTechnologyListText([7, 4, 2])}
               </p>
               <div className={styles.comment}>
                 <p>本サイトです。Next.jsを用いております。</p>

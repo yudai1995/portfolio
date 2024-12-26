@@ -17,7 +17,7 @@ const links = [
     img: '/images/wantdly-icon01.png',
   },
 ];
-const email = 'y.y.dizwpgar@gmail.com';
+const email = 'y.yama991103@gmail.com';
 const Contact = () => {
   const [copyed, setCopyed] = React.useState(false);
   const copyEmailToClipboard = (e) => {
