@@ -7,8 +7,8 @@ const Header: React.FC = () => {
     <header className={`${styles.header}`}>
       <div className={`${styles.headerWrapper} inner`}>
         <h1 className={styles.headerTitle}>
-          <Link href="/" passHref>
-            <a className="logoName">Yudai Yamamoto</a>
+          <Link href="/" passHref  className="logoName">
+            Yudai Yamamoto
           </Link>
         </h1>
         <GlobalNavi />

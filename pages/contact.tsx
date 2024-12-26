@@ -5,6 +5,8 @@ import ContentLayout from '../components/Layout/ContentLayout';
 import LinkLayout from '../components/Layout/LinkLayout';
 import styles from '../styles/Contact.module.scss';
 import React from 'react';
+import emailIcon from '../public/images/email-icon01.png'
+
 const links = [
   {
     name: 'GitHub',
@@ -55,10 +57,9 @@ const Contact = () => {
             <div className={styles.emailWrapper}>
               <span className={styles.emailIcon}>
                 <Image
-                  src='/images/email-icon01.png'
+                  src={emailIcon}
                   className={styles.icon}
                   alt='E-mail'
-                  layout={'intrinsic'}
                   width={64}
                   height={48}
                 />
