@@ -24,7 +24,8 @@
     padding: 20px 40px;
     background-color: #ffffff;
     z-index: inherit;
-    overflow: scroll;
+    overflow-y: auto;
+    
 
     .closeBtn {
       position: relative;
