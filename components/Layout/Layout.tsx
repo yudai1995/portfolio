@@ -20,7 +20,6 @@ const Layout: React.FC<LayoutProps> = ({ children, home }) => {
                 <meta name='og:title' content='Yudai Yamamoto' />
                 <meta name='twitter:card' content='summary_large_image' />
             </Head>
-            <Background />
             {home ? (
                 <header className={`${styles.homeHeader}`}>
                     <div className={`${styles.headerWrapper} inner`}>

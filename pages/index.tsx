@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Layout from '../components/Layout/Layout';
 import styles from '../styles/Home.module.scss';
+import Background from '../components/three/Background';
 
 export default function Home() {
     return (
@@ -15,14 +16,24 @@ export default function Home() {
             </Head>
 
             <Layout home={true}>
-                <section className={styles.homeWrapper}>
-                    <div className={styles.introduction}>
-                        <h2 className={`${styles.homeName} logoName`}>
-                            Yudai Yamamoto
-                        </h2>
-                        <p className={styles.text}>Hello, Welcome!</p>
-                    </div>
-                </section>
+                <div
+                    style={{
+                        position: 'relative',
+                        zIndex: 0,
+                        marginRight: '-10px',
+                        marginLeft: '-10px',
+                    }}
+                >
+                    <Background />
+                    <section className={styles.homeWrapper}>
+                        <div className={styles.introduction}>
+                            <h2 className={`${styles.homeName} logoName`}>
+                                Yudai Yamamoto
+                            </h2>
+                            <p className={styles.text}>Hello, Welcome!</p>
+                        </div>
+                    </section>
+                </div>
             </Layout>
         </div>
     );
