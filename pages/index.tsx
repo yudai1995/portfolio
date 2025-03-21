@@ -20,8 +20,6 @@ export default function Home() {
                     style={{
                         position: 'relative',
                         zIndex: 0,
-                        marginRight: '-10px',
-                        marginLeft: '-10px',
                     }}
                 >
                     <Background />

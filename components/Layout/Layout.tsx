@@ -21,17 +21,24 @@ const Layout: React.FC<LayoutProps> = ({ children, home }) => {
                 <meta name='twitter:card' content='summary_large_image' />
             </Head>
             {home ? (
-                <header className={`${styles.homeHeader}`}>
-                    <div className={`${styles.headerWrapper} inner`}>
-                        <GlobalNavi />
-                    </div>
-                </header>
+                <>
+                    <header className={`${styles.homeHeader}`}>
+                        <div className={`${styles.headerWrapper} inner`}>
+                            <GlobalNavi />
+                        </div>
+                    </header>
+                    <main>
+                        <div className={styles.contents}>{children}</div>
+                    </main>
+                </>
             ) : (
-                <Header />
+                <>
+                    <Header />
+                    <main className='inner'>
+                        <div className={styles.contents}>{children}</div>
+                    </main>
+                </>
             )}
-            <main className='inner'>
-                <div className={styles.contents}>{children}</div>
-            </main>
             <Footer />
         </>
     );
